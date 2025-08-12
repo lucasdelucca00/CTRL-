@@ -1,0 +1,107 @@
+.header-middle ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 10px;
+    color: #FC4B38;
+}
+
+.header-middle input{
+    background: url(../../Assets/icon\ search.svg) no-repeat calc(100% - 30px);
+    padding-left: 30px;
+    background-color: white;
+    background-size: 27px;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0.5px solid #7C7C7C;
+    outline: none;
+    font-size: 16px;
+}
+
+.header-middle{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 10px 40px;
+}
+
+.header-middle li a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Silkscreen";
+}
+
+.header-middle li img {
+    height: 30px;
+}
+
+.header-top{
+    color: #FC4B38;
+    display: flex;
+    justify-content: space-between;
+    padding: 17px 50px;
+    flex-direction: row; 
+    align-items: center;
+
+}
+
+.header-top span{
+    font-family: "Silkscreen";
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+}
+
+.header-top nav {
+    display: flex;
+    gap: 10px;
+}
+
+.header-top a{
+    text-decoration: none;
+    color: #C5C5C5;
+    font-family: "Inter";
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.header-top div{
+    width: 225px;
+    height: 10px;
+}
+
+.header-menu{
+    border-top: 1px solid #7C7C7C;
+    padding: 10px 8px;
+    overflow: auto;
+}
+
+.header-menu menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 18px;
+}
+
+.header-menu li{
+    border: 3px solid #FC4B38;
+    padding: 6px 17px;
+}
+
+.header-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-family: "Silkscreen";
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.header-menu a:hover {
+    color: #FC4B38;
+}
