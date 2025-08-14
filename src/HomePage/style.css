@@ -1,3 +1,28 @@
-section {
-    color: white;
+.links-diretos {
+    display: grid;
+    grid-template-columns: repeat(4, auto); /* 4 colunas */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;    /* centraliza verticalmente */
+    gap: 0px 0px; /* espaçamento: linha / coluna */
+    background-color: black;
+    padding: 10px 10px;
+}
+.links-diretos a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* altura fixa do bloco */
+}
+
+
+.links-diretos a img {
+    max-height: 150px; /* altura máxima da imagem */
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+}
+
+.links-diretos a:hover img {
+    transform: scale(1.1);
 }
