@@ -1,0 +1,90 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
+  max-width: 1200px; /* largura máxima fixa */
+  margin: 0 auto; /* centraliza */
+  padding: 30px 30px;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  color: #C5C5C5;
+  gap: 50px;
+}
+
+.coluna {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coluna li {
+  margin: 6px 0;
+}
+
+.top {
+  font-weight: bold;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+
+
+.top-list-footer {
+  font-size: 15pt;
+  font-weight: bold;
+  padding-bottom: 15px;
+  color: #FC4B38;
+  text-transform: uppercase;
+}
+
+/* ---------- LINKS ---------- */
+.coluna li a {
+  text-decoration: none;
+  color: #C5C5C5;
+  font-size: 12pt;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.coluna li a:hover {
+  color: #FC4B38;
+}
+
+/* ---------- PAGAMENTOS ---------- */
+.pagamentos {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0px;
+  align-items: center;
+  justify-items: start;
+}
+
+.pagamentos a img {
+  max-width: 60px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.pagamentos a:hover img {
+    transform: scale(1.1);
+}
+
+/* ---------- FUNDO DAS SEÇÕES ---------- */
+.s1 {
+  background-color: #1F1F1F;
+}
+
+.s2 {
+  background-color: #000;
+}
+
+/* ---------- REDES SOCIAIS ---------- */
+#l1 img {
+  display: block;
+  margin: 8px 0;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+
+}
+
+#l1 img:hover {
+    transform: scale(1.1);
+}
