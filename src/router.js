@@ -15,13 +15,14 @@ export async function router() {
   document.getElementById('app').innerHTML = html;
 
   const headerHtml = await fetch('/src/header/header.html').then(res => res.text());
-  document.getElementById('header').innerHTML = headerHtml;
-
-  const homepageHtml = await fetch('/src/homepage/homepage.html').then(res => res.text());
-  document.getElementById('homepage').innerHTML = homepageHtml;
-
+  document.getElementById('header').innerHTML = headerHtml;  
+  
   const footerHtml = await fetch('/src/footer/footer.html').then(res => res.text());
   document.getElementById('footer').innerHTML = footerHtml;
+
+  const homepageHtml = await fetch('/src/homepage/homepage.html').then(res => res.text());
+  document.getElementById('homepage').innerHTML = homepageHtml;  
+
 }
 
 window.addEventListener('hashchange', router);
