@@ -1,6 +1,16 @@
-export const routes = {
-  '/': '/src/homepage/homepage.html',
-  '/about': '/src/About/about.html'
+import { renderHomePage } from "./HomePage/homePage.js";
+import { renderAboutPage } from "./About/about.js";
+import { renderHeader } from "./Header/header.js";
+import { renderFooter } from "./Footer/footer.js";
+import { openLogin } from "./Login/login.js";
+
+
+const routes = {
+  '/': renderHomePage,
+  '/about': renderAboutPage,
+  '/login': openLogin
+
+
 };
 
 export function navigateTo(route) {
@@ -11,19 +21,11 @@ export async function router() {
   const path = window.location.hash.replace('#', '') || '/';
   const route = routes[path] || routes['/'];
 
-  const html = await fetch(route).then(res => res.text());
-  document.getElementById('app').innerHTML = html;
+  route();
 
-  const headerHtml = await fetch('/src/header/header.html').then(res => res.text());
-  document.getElementById('header').innerHTML = headerHtml;  
-  
-  const footerHtml = await fetch('/src/footer/footer.html').then(res => res.text());
-  document.getElementById('footer').innerHTML = footerHtml;
+  renderHeader();
 
-  const homepageHtml = await fetch('/src/homepage/homepage.html').then(res => res.text());
-  document.getElementById('homepage').innerHTML = homepageHtml;  
-
+  renderFooter();
 }
 
 window.addEventListener('hashchange', router);
-window.addEventListener('load', router);

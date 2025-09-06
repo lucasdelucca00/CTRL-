@@ -8,103 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-
     <style>@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap'); @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');</style>
   </head>
   <body>
     <header id="header"></header>
-    <main id="app"></main>    
 
-    <section class="banner"> <!-- banner lancamentos -->
-      <div class="carousel-wrapper">
-        <div class="carousel">
-          <div class="carousel-track">
-            <div class="slide active" style="background-image: url('Assets/banner\ lancamento.png');"></div>
-            <div class="slide" style="background-image: url('Assets/banner\ funko.png');"></div>
-            <div class="slide" style="background-image: url('Assets/banner\ caneca.png');"></div>
-          </div>
+    <main id="app"></main>
+    
+    <footer id="footer"></footer>
 
-          <!-- Botões -->
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
-
-          <!-- Indicadores -->
-          <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-
-          <!-- Footer com ícones -->
-          <div class="carousel-footer">
-            <span><i class="fas fa-credit-card"></i> PARCELAS EM ATÉ X VEZES NO CARTÃO</span>
-            <span><i class="fas fa-box"></i> ENTREGA PARA TODO O BRASIL</span>
-            <span><i class="fas fa-dollar-sign"></i> 5% DE DESCONTO NO PIX</span>
-          </div>
-        </div>
-
-        <!-- Botão LANÇAMENTOS -->
-        <div class="lancamentos-btn">LANÇAMENTOS</div>
-      </div>
-    </section>
-
-  <footer id="footer"></footer>
-
-
-  <script>
-    const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dot");
-    const prevBtn = document.querySelector(".prev");
-    const nextBtn = document.querySelector(".next");
-    let index = 0;
-    let autoSlide = setInterval(nextSlide, 4000);
-
-    function showSlide(n) {
-      slides.forEach((slide, i) => {
-        slide.classList.toggle("active", i === n);
-      });
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === n);
-      });
-      document.querySelector(".carousel-track").style.transform = `translateX(-${n * 100}%)`;
-      index = n;
-    }
-
-    function nextSlide() {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    }
-
-    function prevSlide() {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
-    }
-
-    nextBtn.addEventListener("click", () => {
-      nextSlide();
-      resetTimer();
-    });
-    prevBtn.addEventListener("click", () => {
-      prevSlide();
-      resetTimer();
-    });
-
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        showSlide(i);
-        resetTimer();
-      });
-    });
-
-    function resetTimer() {
-      clearInterval(autoSlide);
-      autoSlide = setInterval(nextSlide, 4000);
-    }
-
-    showSlide(index);
-  </script>
-
-  <script type="module" src="src/main.js"></script>
-
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

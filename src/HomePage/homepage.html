@@ -1,13 +1,152 @@
-<section>
-<div class="links-diretos">
-    <a href="#"><img src="../../Assets/disneyplus.png" alt="Disney+"></a>
-    <a href="#"><img src="../../Assets/marvel.png" alt="Marvel"></a>
-    <a href="#"><img src="../../Assets/dc.png" alt="DC"></a>
-    <a href="#"><img src="../../Assets/harrypotter.png" alt="Harry Potter"></a>
-    <a href="#"><img src="../../Assets/naruto.png" alt="Naruto Shippuden"></a>
-    <a href="#"><img src="../../Assets/dbz.png" alt="Dragon Ball Z"></a>
-    <a href="#"><img src="../../Assets/star.jpg" alt="Star Wars"></a>
-    <a href="#"><img src="../../Assets/one piece.jpg" alt="One Piece"></a>
+<!-- Esta linha serve para saber o link atual da página-->
+<span id="link_route" style="display:none;">#/</span>
+
+<div class="main-banner">
+    <img src="../../Assets/banner.png" alt="Main Banner">
 </div>
+
+<section>
+    <div class="links-diretos">
+        <a href="#"><img src="../../Assets/disneyplus.png" alt="Disney+"></a>
+        <a href="#"><img src="../../Assets/marvel.png" alt="Marvel"></a>
+        <a href="#"><img src="../../Assets/dc.png" alt="DC"></a>
+        <a href="#"><img src="../../Assets/harrypotter.png" alt="Harry Potter"></a>
+        <a href="#"><img src="../../Assets/naruto.png" alt="Naruto Shippuden"></a>
+        <a href="#"><img src="../../Assets/dbz.png" alt="Dragon Ball Z"></a>
+        <a href="#"><img src="../../Assets/star.jpg" alt="Star Wars"></a>
+        <a href="#"><img src="../../Assets/one piece.jpg" alt="One Piece"></a>
+    </div>
 </section>
 
+<section class="banner"> <!-- banner lancamentos -->
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <div class="carousel-track">
+            <div class="slide active" style="background-image: url('Assets/banner\ lancamento.png');"></div>
+            <div class="slide" style="background-image: url('Assets/banner\ lancamento.png');"></div>
+            <div class="slide" style="background-image: url('Assets/banner\ lancamento.png');"></div>
+          </div>
+
+          <!-- Botões -->
+          <button class="prev"><img src="../../Assets/seta-carrossel.svg"></button>
+          <button class="next"><img src="../../Assets/seta2.svg"></button>
+
+          <!-- Indicadores -->
+          <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+
+          <!-- Footer com ícones -->
+          <div class="carousel-footer">
+            <span><i class="fas fa-credit-card"></i> PARCELAS EM ATÉ X VEZES NO CARTÃO</span>
+            <span><i class="fas fa-box"></i> ENTREGA PARA TODO O BRASIL</span>
+            <span><i class="fas fa-dollar-sign"></i> 5% DE DESCONTO NO PIX</span>
+          </div>
+        </div>
+    </section>
+
+<div class="lancamentos"><span>LANÇAMENTOS</span></div>
+
+<section class="carrossel">
+    <button class="btn-prev"
+    onclick="document.querySelector('.card-list').scrollBy({left: -360, behavior: 'smooth'})"><img src="../../Assets/seta-carrossel.svg"></button>
+        <ul class="card-list">
+            <li class="card-item">
+                <a href="#">
+                    <img src="../../../../Assets/super-oversized.webp" alt="camiseta oversized escrita Super">
+                    <span class="carousel-product-name" >Super Oversized</span>
+                    <span class="carousel-product-value">R$129,90</span>
+                </a>
+            </li>
+            <li class="card-item">
+                <a href="#">
+                    <img src="../../../../Assets/caneca-sonic.webp" alt="Caneca com imagem do sonic">
+                    <span class="carousel-product-name">Caneca sonic</span>
+                    <span class="carousel-product-value">R$ 74,90</span>
+                </a>
+            </li>
+            <li class="card-item">
+                <a href="#">
+                    <img src="../../../../Assets/touca-gaara.webp" alt="Touca com escrita amor japones">
+                    <span class="carousel-product-name">Touca Gaara</span>
+                    <span class="carousel-product-value">R$ 69,90</span>
+                </a>
+            </li>
+            <li class="card-item">
+                <a href="#">
+                    <img src="../../../../Assets/souleater-bag.jpg" alt="Bag anime soul eater">
+                    <span class="carousel-product-name">Soul eater bag</span>
+                    <span class="carousel-product-value">R$ 210,00</span>
+                </a>
+            </li>
+            <li class="card-item">
+                <a href="#">
+                    <img src="../../../../Assets/caneca-sonic.webp" alt="Caneca com imagem do sonic">
+                    <span class="carousel-product-name">Caneca sonic</span>
+                    <span class="carousel-product-value">R$ 74,90</span>
+                </a>
+            </li>
+            <li class="card-item">
+                <a href="#">
+                    <img src="./../../../Assets/touca-gaara.webp" alt="Touca com escrita amor japones">
+                    <span class="carousel-product-name">Touca Gaara</span>
+                    <span class="carousel-product-value">R$ 69,90</span>
+                </a>
+            </li>
+        </ul>
+        <button class="btn-next"
+  onclick="document.querySelector('.card-list').scrollBy({left: 360, behavior: 'smooth'})"><img src="../../Assets/seta2.svg"></button>
+</section>
+
+<section class="comentarios">
+    <div class="comentarios-container">
+        <div class="comentario">
+            <div class="balao-img">
+                <h4>A loja tem ótimos<br>
+                produtos. Muita qualidade.<br>
+                <strong>Lucas S.</strong><br>
+                28/07/2025</h4>
+            </div>
+            <div class="estrelas" data-avaliacao="0">★★★★★</div>
+        </div>
+
+        <div class="comentario">
+            <div class="balao2-img">
+                <h4>A loja tem ótimos<br>
+                produtos. Muita qualidade.<br>
+                <strong>Lucas S.</strong><br>
+                28/07/2025</h4>
+            </div>
+            <div class="estrelas" data-avaliacao="0">★★★★★</div>
+        </div>
+
+        <div class="comentario">
+            <div class="balao3-img">
+                <h4>A loja tem ótimos<br>
+                produtos. Muita qualidade.<br>
+                <strong>Lucas S.</strong><br>
+                28/07/2025</h4>
+            </div>
+            <div class="estrelas" data-avaliacao="0">★★★★★</div>
+        </div>
+    </div>
+
+    <div class="estampa">
+        <img src ="../../Assets/Area_estampa.png" alt="Estampa">
+    </div>
+
+    <div class="estampa-botao">
+        <a href="#"><img src ="../../Assets/botao_estampe.png" alt="Estampa"></a>
+    </div>
+
+</section>
+
+<section clas="find-us">
+    <div class="find-us-container">
+        <div class="mapa">
+
+        </div>
+    </div>
+</section>

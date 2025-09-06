@@ -1,44 +1,51 @@
 /* LINKS DIRETOS */
-.links-diretos {
-    display: grid;
-    grid-template-columns: repeat(4, auto); /* 4 colunas */
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;    /* centraliza verticalmente */
-    gap: 0px 0px; /* espaçamento: linha / coluna */
-    background-color: black;
-    padding: 10px 10px;
+.links-diretos {  
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  /* 4 colunas */
+  justify-content: center;
+  /* centraliza horizontalmente */
+  align-items: center;
+  /* centraliza verticalmente */
+  gap: 0px 0px;
+  /* espaçamento: linha / coluna */
+  background-color: black;
+  padding: 10px 10px;
 }
+
 .links-diretos a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150px; /* altura fixa do bloco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  /* altura fixa do bloco */
 }
 
 
 .links-diretos a img {
-    max-height: 150px; /* altura máxima da imagem */
-    max-width: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+  max-height: 150px;
+  /* altura máxima da imagem */
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 
 }
 
 .links-diretos a:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* CAROSSEL */
 
 .carousel-wrapper {
-  max-width: 1440px;
+  max-width: auto;
   margin: auto;
   text-align: center;
 }
 
 .carousel {
   position: relative;
-  height: 450px;
+  height: 550px;
   margin: auto;
   overflow: hidden;
   background-color: #000;
@@ -55,8 +62,8 @@
 .slide {
   min-width: 100%;
   height: 100%;
-  background-size: cover;    
-  background-position: center; 
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -67,13 +74,14 @@
 }
 
 /* Setas */
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.9);
-  border: 2px solid #FC4B38;
-  padding: 10px 14px;
+  background: transparent;
+  border: transparent;
+  padding: 3px 3px;
   cursor: pointer;
   color: #FC4B38;
   font-size: 20px;
@@ -82,8 +90,21 @@
   border-radius: 6px;
 }
 
-.prev { left: 15px; }
-.next { right: 15px; }
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.prev:hover {
+  background: white;
+}
+
+.next:hover {
+  background: white;
+}
 
 .dots {
   text-align: center;
@@ -127,8 +148,15 @@
 }
 
 /* Botão LANÇAMENTOS */
-.lancamentos-btn {
-  display: inline-block;
+.lancamentos{
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 0px;  
+  justify-content: center;
+}
+
+.lancamentos span{
+  display: flex;
   border: 3px solid #FC4B38;
   color: #FC4B38;
   font-family: 'Silkscreen', cursive;
@@ -136,15 +164,224 @@
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 6px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.main-banner {
+  width: 100%;
+  height: 400px;
+  /* ajuste conforme necessário */
+  background: url("../../Assets/banner.jpg") no-repeat center center;
+  background-size: cover;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  overflow: hidden;
+  /* garante que a imagem respeite o arredondamento */
+}
+
+.main-banner img {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  display: block;
+}
+
+/* carrossel glória */
+
+.card-list {
+  list-style: none;
+}
+
+.card-item a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  gap: 10px;
+  font-family: Inter;
+  font-size: 22px;
+}
+
+.card-item img {
+  width: 321px;
+  height: 321px;
+}
+
+.card-list {
+  display: flex;
+  gap: 10px;
+  overflow: auto;
+}
+
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.carrossel {
+  overflow: hidden;
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrossel button {
+  display: flex;
+  background-color: transparent;
+  height: fit-content;
+  margin: 0px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.carrossel button:hover {
+  background: white;
+}
+
+.card-item:hover {
+  background-color: #FC4B38;
+  transform: translate(-2px, -2px);
+}
+
+.card-item{
+  color: #FC4B38;
+  padding: 6px 14px;
   cursor: pointer;
   transition: all 0.2s steps(4, end);
 }
 
-.lancamentos-btn:hover {
-  background-color: #FC4B38;
-  color: white;
-  box-shadow: 3px 3px 0px #000;
-  transform: translate(-2px, -2px);
+.carousel-product-name{
+  font-weight: 250;
+  letter-spacing: 1px;
 }
+
+.carousel-product-value{
+  font-weight: 700;
+}
+
+/* Comentarios clientes / Estampe */
+
+.comentarios {
+  position: relative;
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza balão e estrelas */
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+
+/* Degradê */
+.comentarios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(to bottom, 
+      rgb(0, 0, 0) 0%,     /* topo escuro */
+      rgba(255, 255, 255, 0) 50%,      /* some no meio */
+      rgba(255, 255, 255, 0) 30%, 
+      rgb(0, 0, 0) 100%    /* base escura */
+    ),
+    url("../../Assets/fundo_coment.png") center/cover no-repeat;
+    filter: brightness(0.5) contrast(1); /* agora só no fundo */
+    z-index: -1; /* fica atrás do conteúdo */
+}
+
+.comentario {
+  display: flex;
+  flex-direction: column; /* balão em cima, estrelas embaixo */
+  align-items: center;
+}
+
+.comentarios-container {
+  display: flex;
+  }
+
+.elemento-abaixo {
+  text-align: center;
+  color: #fff; /* se quiser contraste com o fundo */
+}
+/* Balão */
+
+.balao-img {
+  background: url("../../Assets/balao3.png") center/contain no-repeat;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-family: Inter;
+  color: #000000;
+
+}
+
+.balao2-img {
+  background: url("../../Assets/balao.png") center/contain no-repeat;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-family: Inter;
+  color: #000000;
+}
+
+.balao3-img {
+  background: url("../../Assets/balao2.png") center/contain no-repeat;
+  width: 350px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-family: Inter;
+  color: #000000;
+}
+
+/* Estrelas */
+
+.estrelas {
+  margin-top: -90px;
+  font-size: 32px;
+  color: lightgray;
+  cursor: pointer;
+  user-select: none;
+}
+
+.estrelas span {
+  color: #FC4B38;
+}
+
+/* Estampa */
+.estampa{
+  opacity: .9;
+  margin-top: 50px;
+  max-width: auto;   /* ajuste conforme necessário */
+  height: auto;
+  display: block;
+}
+
+.estampa-botao {
+  padding-left: 4%; /* move 20px para a direita */
+  margin-top: -8%;
+}
+
+
+/* Find us */
+.find-us{
+  height: 3000px;
+  width: 100%;
+  background-color:black;
+}
+
+
